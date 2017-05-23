@@ -105,7 +105,7 @@ describe('01-strings-tasks', function() {
     it.optional('isString should return true if argument ia a string', function() {
         assert.equal(false, tasks.isString(), "undefined");
         assert.equal(false, tasks.isString(null), "null");
-        // assert.equal(false, tasks.isString([]), "[]");
+        assert.equal(false, tasks.isString([]), "[]");
         assert.equal(true, tasks.isString('test'), "test");
         assert.equal(true, tasks.isString(new String('test')), "new String('test')");
     });
