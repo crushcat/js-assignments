@@ -131,7 +131,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-    throw new Error('Not implemented');
+    return +(value.toString().charAt(value.toString().length-1));
 }
 
 
@@ -147,7 +147,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-    throw new Error('Not implemented');
+    return +value
 }
 
 /**
@@ -164,7 +164,7 @@ function parseNumberFromString(value) {
  *   1,2,3   => 3.741657386773941
  */
 function getParallelipidedDiagonal(a,b,c) {
-    throw new Error('Not implemented');
+    return Math.sqrt(Math.pow(a,2)+Math.pow(b,2)+Math.pow(c,2))
 }
 
 /**
@@ -185,7 +185,7 @@ function getParallelipidedDiagonal(a,b,c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-    throw new Error('Not implemented');
+    return pow==0 ? num : (Math.round(num/(Math.pow(10,pow))))*(Math.pow(10,pow));
 }
 
 /**
@@ -206,7 +206,15 @@ function roundToPowerOfTen(num, pow) {
  *   17 => true
  */
 function isPrime(n) {
-    throw new Error('Not implemented');
+    let i=2,
+        j=0;
+    while (i*i<=n && j !=1){
+        if (n % i == 0){
+            j = 1;
+        }
+        i++;
+    }
+    return n<4? true : j === 0;
 }
 
 /**
@@ -225,7 +233,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    throw new Error('Not implemented');
+    return !isNaN(parseFloat(value)) && isFinite(value) ? parseFloat(value) : def;
 }
 
 module.exports = {
