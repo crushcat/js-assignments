@@ -21,6 +21,10 @@ describe('03-date-tasks', function() {
             895370400000,
             tasks.parseDataFromRfc2822('Sun, 17 May 1998 03:00:00 GMT+01').valueOf()
         );
+        assert.equal(
+            895373940000,
+            tasks.parseDataFromRfc2822('Sun, 17 May 1998 05:59:00 GMT+03').valueOf()
+        );
     });
 
 
@@ -92,8 +96,8 @@ describe('03-date-tasks', function() {
         });
 
     });
-    
-    
+
+
     it.optional('angleBetweenClockHands should returns the angle bettween clock hands for specified Greenwich datetime', function () {
         [
             {
@@ -128,7 +132,7 @@ describe('03-date-tasks', function() {
             assert.equal(
                 tasks.angleBetweenClockHands(new Date(data.date)),
                 data.expected,
-                `Incorrect result for angleBetweenClockHands(${new Date(data.date).toUTCString()}):`   
+                `Incorrect result for angleBetweenClockHands(${new Date(data.date).toUTCString()}):`
             );
         });
     });
