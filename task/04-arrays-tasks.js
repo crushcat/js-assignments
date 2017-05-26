@@ -329,8 +329,9 @@ function get3TopItems(arr) {
  *   [ null, 1, 'elephant' ] => 1
  */
 function getPositivesCount(arr) {
-   return arr.reduce((item, sum)=>{
+   return arr.reduce((sum, item)=>{
        if (item >0 ) sum++;
+       return sum;
    },0)
 }
 
