@@ -46,7 +46,7 @@ describe('04-arrays-tasks', function() {
             },{
                 len:      16,
                 expected: [ 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ]
-            } 
+            }
         ].forEach(data => {
             assert.deepEqual(
                 data.expected,
@@ -231,10 +231,10 @@ describe('04-arrays-tasks', function() {
                 expected: [ 'x', 1, 'b', 'c' ]
             }
         ].forEach(data => {
-            tasks.insertItem(data.arr, data.item, data.index);
+
             assert.deepEqual(
                 data.expected,
-                data.arr
+                tasks.insertItem(data.arr, data.item, data.index)
             );
         });
     });
@@ -859,5 +859,5 @@ describe('04-arrays-tasks', function() {
                   );
               });
     });
-     
+
 });
