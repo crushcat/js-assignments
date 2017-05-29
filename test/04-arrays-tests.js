@@ -516,7 +516,7 @@ describe('04-arrays-tasks', function() {
                 arr:      [ ],
                 expected: 0
             },{
-                arr:      [ 1, '', 3 ],
+                arr:      [ 1, "", 3 ],
                 expected: 1
             },{
                 arr:      [ -1, 'false', null, 0 ],
